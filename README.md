@@ -16,6 +16,10 @@ Until a user has confirmed a booking request, that space can still be booked for
 As a user
 I want to be able to sign up for the website
 
+As a user 
+I want the websit to store my login info
+So that I can log back in
+
 As a user
 I want to be able to sign/log in
 
