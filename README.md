@@ -17,7 +17,7 @@ As a user
 I want to be able to sign up for the website ✅
 
 As a user 
-I want the websit to store my login info
+I want the website to store my login info
 So that I can log back in
 
 As a user
@@ -52,3 +52,13 @@ I only want to be able to see nights the room is not booked and available
 
 As a user
 I want to leave a space available until the owners confirmation
+
+**RSPEC COVERAGE** 
+
+Coverage obtained using SimpleCov
+To check coverage:
+* Nativage to MakersBnB
+* Open .
+* Open coverage file
+* Select index.html
+* Coverage report generated
