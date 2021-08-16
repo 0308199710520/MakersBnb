@@ -14,7 +14,7 @@ Until a user has confirmed a booking request, that space can still be booked for
 **USER STORIES**
 
 As a user
-I want to be able to sign up for the website
+I want to be able to sign up for the website ✅
 
 As a user 
 I want the websit to store my login info
