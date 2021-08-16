@@ -8,6 +8,14 @@ class MakersBnb < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  get '/' do
+    erb :index
+  end 
+
+  post '/new_user' do 
+    'Account created'
+  end
+
   run! if app_file == $0
 
 end
