@@ -1,5 +1,6 @@
 Lauren Taylor-Brown
 danyaal
+Hamid
 
 Any signed-up user can list a new space.
 Users can list multiple spaces.
