@@ -1,0 +1,2 @@
+CREATE DATABASE makersbnb;
+CREATE TABLE user_info(id SERIAL PRIMARY KEY, email VARCHAR(50), password VARCHAR(20));
