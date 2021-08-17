@@ -5,18 +5,18 @@
         "lines": [
           1,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
-          0,
+          1,
           null,
           null,
           null,
@@ -28,12 +28,12 @@
         "lines": [
           1,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
-          0,
+          1,
           null,
           null
         ]
@@ -41,13 +41,42 @@
       "/Users/mikey/Documents/login/MakersBnb/spec/user_spec.rb": {
         "lines": [
           1,
+          1,
           null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          7,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/mikey/Documents/login/MakersBnb/lib/user.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
           0,
           0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1629197500
+    "timestamp": 1629199147
   }
 }

@@ -23,7 +23,7 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/user/logins' do 
-    @email_address = params[:email_address]
+    @email = params[:email]
     @password = params[:password]
     erb :login_user
   end 
