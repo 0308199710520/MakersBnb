@@ -1,7 +1,7 @@
 feature 'Homepage test' do 
   scenario 'visiting the homepage' do 
     visit ('/')
-    expect(page).to have_content ('Homepage')
+    expect(page).to have_content ('Feel at home, anywhere')
   end 
 
   scenario 'inputs email address, password and password confirmation' do 
@@ -11,7 +11,7 @@ feature 'Homepage test' do
     fill_in('confirm password', with: 'password')
     click_button('Submit')
 
-    expect(page).to have_content('Account created')
+    expect(page).to have_content('Login')
   end 
 
 end 

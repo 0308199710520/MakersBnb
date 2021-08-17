@@ -14,19 +14,19 @@ class MakersBnb < Sinatra::Base
     erb :index
   end 
 
-  post '/new_user' do 
-    'Account created'
-  end
-  
-  get '/user/login' do 
+  get '/login' do 
       erb :login
   end
 
-  post '/user/logins' do 
+  post '/login' do 
     @email = params[:email]
     @password = params[:password]
-    erb :login_user
+    erb :login
   end 
+
+  post '/spaces' do
+    'welcome'
+  end
 
 
   run! if app_file == $0
