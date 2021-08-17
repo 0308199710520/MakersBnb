@@ -42,14 +42,17 @@
         "lines": [
           1,
           1,
-          null,
           1,
           null,
           1,
+          null,
           1,
           1,
           1,
-          7,
+          null,
+          1,
+          1,
+          9,
           1,
           1,
           null,
@@ -73,10 +76,26 @@
           1,
           1,
           null,
+          0,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/Student/projects/makersbnb/MakersBnb/spec/setup_test_database.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1629207453
+    "timestamp": 1629208453
   }
 }

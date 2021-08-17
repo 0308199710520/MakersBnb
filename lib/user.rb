@@ -9,6 +9,11 @@ class User
   end
 
   def self.create(email_address, password)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'user_info_test')
+    else 
+      connection = PG.connect(dbname: 'user_info')
+    end
     con = PG.connect(dbname: "makersbnb")
     con.exec("INSERT INTO user_info (email, password) VALUES ('#{email_address}', '#{password}')")
   end
