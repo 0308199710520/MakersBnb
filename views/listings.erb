@@ -1,5 +1,10 @@
 <ul>
   <% @listings.each do |listing| %>
-    <li><%= listing %></li>
+     <b> name: </b><%= listing.name %>
+    <br/>
+    <b> description: </b><%= listing.description %>
+    <br/>
+    <br/>
   <% end %>
+
 </ul>

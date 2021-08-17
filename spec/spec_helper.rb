@@ -20,6 +20,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
+require 'setup_test_database'
 
 # SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 #   SimpleCov::Formatter::Console,
@@ -32,6 +33,8 @@ Capybara.app = MakersBnb
 
 ENV['RACK_ENV'] = 'test'
 ENV['ENVIRONMENT'] = 'test'
+
+setup_test_database
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
