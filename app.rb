@@ -32,3 +32,7 @@ class MakersBnb < Sinatra::Base
   run! if app_file == $0
 
 end
+
+
+#CREATE DATABASE makersbnb
+#CREATE TABLE user(id SerialPrimaryKey, email Varchar(50), password Varchar(10))
