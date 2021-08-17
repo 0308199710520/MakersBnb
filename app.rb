@@ -16,6 +16,15 @@ class MakersBnb < Sinatra::Base
     'Account created'
   end
 
+  get '/listings/new' do
+    erb :listing_new
+  end
+ 
+  post '/listings' do
+    'Listing created'
+  
+  end
+
   run! if app_file == $0
 
 end
