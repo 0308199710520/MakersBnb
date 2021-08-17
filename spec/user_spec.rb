@@ -8,11 +8,13 @@ describe User do
     it "should store the email and password in the database when provided them" do
       setup_test_database
 
-      User.create("user@gmail.com", "password")
+      User.create(email: "user@gmail.com", password: "password")
       con = PG.connect(dbname: "makersbnb")
       content = con.exec("SELECT email, password FROM user_info").map{|each| each}
       expect(content[0]["email"]).to eq "user@gmail.com"
       expect(content[0]["password"]).to eq "password"
     end
   end
+
+
 end

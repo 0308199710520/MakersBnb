@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-08-17T14:54:13+01:00">2021-08-17T14:54:13+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-08-17T15:58:20+01:00">2021-08-17T15:58:20+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  92.31%
+  92.11%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>39</b> relevant lines,
-    <span class="green"><b>36</b> lines covered</span> and
+    <b>38</b> relevant lines,
+    <span class="green"><b>35</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  92.31%
+  92.11%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#16c0c54811afef927303fcf02e3d636fc8b4fbdb" class="src_link" title="lib/user.rb">lib/user.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">75.00 %</td>
-            <td class="cell--number">20</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">9</td>
+            <td class="red strong cell--number t-file__coverage">72.73 %</td>
+            <td class="cell--number">22</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">3</td>
-            <td class="cell--number">0.75</td>
+            <td class="cell--number">0.73</td>
             
           </tr>
         
@@ -117,7 +117,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b34377c2dccd6a4c71467b73d8c4b1096bc7d753" class="src_link" title="spec/user_spec.rb">spec/user_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">18</td>
+            <td class="cell--number">20</td>
             <td class="cell--number">12</td>
             <td class="cell--number">12</td>
             <td class="cell--number">0</td>
@@ -147,7 +147,7 @@
     <h3>lib/user.rb</h3>
     <h4>
       <span class="red">
-  75.0%
+  72.73%
 </span>
 
       lines covered
@@ -156,8 +156,8 @@
     
 
     <div class="t-line-summary">
-      <b>12</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>11</b> relevant lines.
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>3</b> lines missed.</span>
     </div>
 
@@ -208,7 +208,7 @@
 
             
 
-            <code class="ruby">  attr_reader :email_address, :password</code>
+            <code class="ruby">  attr_reader :email, :password</code>
           </li>
         </div>
       
@@ -230,7 +230,7 @@
 
             
 
-            <code class="ruby">  def initialize(email_address:, password:)</code>
+            <code class="ruby">  def initialize(email:, password:)</code>
           </li>
         </div>
       
@@ -241,7 +241,7 @@
 
             
 
-            <code class="ruby">    @email_address = email_address</code>
+            <code class="ruby">    @email = email</code>
           </li>
         </div>
       
@@ -285,7 +285,7 @@
 
             
 
-            <code class="ruby">  def self.create(email_address, password)</code>
+            <code class="ruby">  def self.create(email:, password:)</code>
           </li>
         </div>
       
@@ -307,7 +307,7 @@
 
             
 
-            <code class="ruby">      connection = PG.connect(dbname: &#39;user_info_test&#39;)</code>
+            <code class="ruby">      connection = PG.connect(dbname: &#39;makersbnb_test&#39;)</code>
           </li>
         </div>
       
@@ -329,7 +329,7 @@
 
             
 
-            <code class="ruby">      connection = PG.connect(dbname: &#39;user_info&#39;)</code>
+            <code class="ruby">      connection = PG.connect(dbname: &#39;makersbnb&#39;)</code>
           </li>
         </div>
       
@@ -345,13 +345,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="17">
+            
             
 
             
 
-            <code class="ruby">    con = PG.connect(dbname: &quot;makersbnb&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -362,7 +362,7 @@
 
             
 
-            <code class="ruby">    con.exec(&quot;INSERT INTO user_info (email, password) VALUES (&#39;#{email_address}&#39;, &#39;#{password}&#39;)&quot;)</code>
+            <code class="ruby">    connection.exec(&quot;INSERT INTO user_info (email, password) VALUES (&#39;#{email}&#39;, &#39;#{password}&#39;)&quot;)</code>
           </li>
         </div>
       
@@ -373,12 +373,34 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    # User.new(email: result[0][&#39;email&#39;], password: result[0][&#39;password&#39;],)</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
@@ -840,7 +862,7 @@
 
             
 
-            <code class="ruby">  connection = PG.connect(dbname: &#39;user_info_test&#39;)</code>
+            <code class="ruby">  connection = PG.connect(dbname: &#39;makersbnb_test&#39;)</code>
           </li>
         </div>
       
@@ -851,7 +873,7 @@
 
             
 
-            <code class="ruby">  connection.exec(&quot;TRUNCATE user_info_test;&quot;)</code>
+            <code class="ruby">  connection.exec(&quot;TRUNCATE user_info;&quot;)</code>
           </li>
         </div>
       
@@ -1025,7 +1047,7 @@
 
             
 
-            <code class="ruby">      User.create(&quot;user@gmail.com&quot;, &quot;password&quot;)</code>
+            <code class="ruby">      User.create(email: &quot;user@gmail.com&quot;, password: &quot;password&quot;)</code>
           </li>
         </div>
       
@@ -1097,6 +1119,28 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 

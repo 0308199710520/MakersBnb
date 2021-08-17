@@ -1,20 +1,22 @@
 require 'pg'
 
 class User
-  attr_reader :email_address, :password
+  attr_reader :email, :password
 
-  def initialize(email_address:, password:)
-    @email_address = email_address
+  def initialize(email:, password:)
+    @email = email
     @password = password
   end
 
-  def self.create(email_address, password)
+  def self.create(email:, password:)
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'user_info_test')
+      connection = PG.connect(dbname: 'makersbnb_test')
     else 
-      connection = PG.connect(dbname: 'user_info')
+      connection = PG.connect(dbname: 'makersbnb')
     end
-    con = PG.connect(dbname: "makersbnb")
-    con.exec("INSERT INTO user_info (email, password) VALUES ('#{email_address}', '#{password}')")
+
+    connection.exec("INSERT INTO user_info (email, password) VALUES ('#{email}', '#{password}')")
+    # User.new(email: result[0]['email'], password: result[0]['password'],)
+
   end
 end

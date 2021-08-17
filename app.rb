@@ -19,10 +19,7 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/login' do 
-    User.create(email: params[email], passworld: params[:password])
-    # @email = params[:email]
-    # @password = params[:password]
-    # erb :login
+    user = User.create(email: params[email], passworld: params[:password])
     redirect '/spaces'
   end 
 
