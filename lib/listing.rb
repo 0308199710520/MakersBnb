@@ -2,10 +2,27 @@ require 'pg'
 class Listing
   
   def self.all
-    connection = PG.connect(dbname: 'makers_bnb')
+    
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makers_bnb_test')
+    else
+      connection = PG.connect(dbname: 'makers_bnb')
+    end
     result = connection.exec("SELECT * FROM listings")
-    result.map { |bookmark| bookmark['name'] }
+    result.map { |listing| listing['name'] }
   end
+
+  def self.create(name:)
+   
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makers_bnb_test')
+    else
+      connection = PG.connect(dbname: 'makers_bnb')
+    end
+
+    connection.exec("INSERT INTO listings (name) VALUES('#{name}')")
+  end
+
 
 
 end

@@ -35,7 +35,11 @@ class MakersBnb < Sinatra::Base
  
   post '/listings' do
     
-    session[:name] = params['name']
+    Listing.create(name: params['name'])
+    
+
+
+
     session[:description] = params['description']
     session[:price] = params['price']
     session[:date_to] = params['date_to']
