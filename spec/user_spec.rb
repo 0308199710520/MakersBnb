@@ -3,7 +3,8 @@ require './spec/setup_test_database'
 require "pg"
 
 describe User do
-  #it { is_expected.to respond_to(:create) }
+  # it { is_expected.to respond_to(:create) }
+
   describe "#create" do
     it "should store the email and password in the database when provided them" do
       setup_test_database
@@ -16,5 +17,6 @@ describe User do
     end
   end
 
+  
 
 end

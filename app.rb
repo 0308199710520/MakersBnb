@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/base'
 require 'pg'
+require './lib/user.rb'
 
 class MakersBnb < Sinatra::Base
   enable :sessions
@@ -14,17 +15,13 @@ class MakersBnb < Sinatra::Base
     erb :index
   end 
 
-  get '/login' do 
-      erb :login
-  end
-
   post '/login' do 
-    user = User.create(email: params[email], passworld: params[:password])
-    redirect '/spaces'
+    User.create(email: params[:email], password: params[:password])
+    erb :login
   end 
 
-  post '/spaces' do
-    'welcome'
+   post '/spaces' do
+    'View our spaces'
   end
 
 

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-08-17T15:58:20+01:00">2021-08-17T15:58:20+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-08-17T17:32:56+01:00">2021-08-17T17:32:56+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  92.11%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.13
+         1.74
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>5</b> files in total.
+    <b>4</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>38</b> relevant lines,
-    <span class="green"><b>35</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed. </span>
+    <b>27</b> relevant lines,
+    <span class="green"><b>27</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  92.11%
+  100.0%
 </span>
 )
   </div>
@@ -69,17 +69,6 @@
         </tr>
       </thead>
       <tbody>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#16c0c54811afef927303fcf02e3d636fc8b4fbdb" class="src_link" title="lib/user.rb">lib/user.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">72.73 %</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">0.73</td>
-            
-          </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#576d0d533a7e10e43772b1faa7f4ad2fdec6a41c" class="src_link" title="spec/features/index_spec.rb">spec/features/index_spec.rb</a></td>
@@ -117,11 +106,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b34377c2dccd6a4c71467b73d8c4b1096bc7d753" class="src_link" title="spec/user_spec.rb">spec/user_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">20</td>
+            <td class="cell--number">22</td>
             <td class="cell--number">12</td>
             <td class="cell--number">12</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.67</td>
+            <td class="cell--number">2.67</td>
             
           </tr>
         
@@ -141,279 +130,6 @@
       </div>
 
       <div class="source_files">
-      
-        <div class="source_table" id="16c0c54811afef927303fcf02e3d636fc8b4fbdb">
-  <div class="header">
-    <h3>lib/user.rb</h3>
-    <h4>
-      <span class="red">
-  72.73%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>11</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;pg&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class User</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  attr_reader :email, :password</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def initialize(email:, password:)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">    @email = email</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">    @password = password</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.create(email:, password:)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    if ENV[&#39;ENVIRONMENT&#39;] == &#39;test&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      connection = PG.connect(dbname: &#39;makersbnb_test&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    else </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">      connection = PG.connect(dbname: &#39;makersbnb&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    connection.exec(&quot;INSERT INTO user_info (email, password) VALUES (&#39;#{email}&#39;, &#39;#{password}&#39;)&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">    # User.new(email: result[0][&#39;email&#39;], password: result[0][&#39;password&#39;],)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
       
         <div class="source_table" id="576d0d533a7e10e43772b1faa7f4ad2fdec6a41c">
   <div class="header">
@@ -992,18 +708,18 @@
 
             
 
-            <code class="ruby">  #it { is_expected.to respond_to(:create) }</code>
+            <code class="ruby">  # it { is_expected.to respond_to(:create) }</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="7">
+            
             
 
             
 
-            <code class="ruby">  describe &quot;#create&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1014,7 +730,7 @@
 
             
 
-            <code class="ruby">    it &quot;should store the email and password in the database when provided them&quot; do</code>
+            <code class="ruby">  describe &quot;#create&quot; do</code>
           </li>
         </div>
       
@@ -1025,29 +741,29 @@
 
             
 
+            <code class="ruby">    it &quot;should store the email and password in the database when provided them&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      setup_test_database</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      User.create(email: &quot;user@gmail.com&quot;, password: &quot;password&quot;)</code>
           </li>
         </div>
       
@@ -1058,29 +774,29 @@
 
             
 
-            <code class="ruby">      con = PG.connect(dbname: &quot;makersbnb&quot;)</code>
+            <code class="ruby">      User.create(email: &quot;user@gmail.com&quot;, password: &quot;password&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="13">
-            <span class="hits">9</span>
-            
-
-            
-
-            <code class="ruby">      content = con.exec(&quot;SELECT email, password FROM user_info&quot;).map{|each| each}</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
+          <li class="covered" data-hits="1" data-linenumber="13">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      expect(content[0][&quot;email&quot;]).to eq &quot;user@gmail.com&quot;</code>
+            <code class="ruby">      con = PG.connect(dbname: &quot;makersbnb&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="21" data-linenumber="14">
+            <span class="hits">21</span>
+            
+
+            
+
+            <code class="ruby">      content = con.exec(&quot;SELECT email, password FROM user_info&quot;).map{|each| each}</code>
           </li>
         </div>
       
@@ -1091,18 +807,18 @@
 
             
 
-            <code class="ruby">      expect(content[0][&quot;password&quot;]).to eq &quot;password&quot;</code>
+            <code class="ruby">      expect(content[0][&quot;email&quot;]).to eq &quot;user@gmail.com&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      expect(content[0][&quot;password&quot;]).to eq &quot;password&quot;</code>
           </li>
         </div>
       
@@ -1113,7 +829,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1124,7 +840,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1141,6 +857,28 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 

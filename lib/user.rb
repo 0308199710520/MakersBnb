@@ -15,8 +15,8 @@ class User
       connection = PG.connect(dbname: 'makersbnb')
     end
 
-    connection.exec("INSERT INTO user_info (email, password) VALUES ('#{email}', '#{password}')")
-    # User.new(email: result[0]['email'], password: result[0]['password'],)
+    result = connection.exec("INSERT INTO user_info (email, password) VALUES ('#{email}', '#{password}')")
+    
 
   end
 end
