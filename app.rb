@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/base'
 require 'pg'
+require_relative './lib/listing.rb'
 
 class MakersBnb < Sinatra::Base
 
@@ -22,13 +23,7 @@ class MakersBnb < Sinatra::Base
 
   get '/listings' do
     
-
-    @name = session[:name]
-    @description = session[:description] 
-    @price = session[:price] 
-    @date_to = session[:date_to] 
-    @date_from = session[:date_from] 
-
+    @listings = Listing.all
     erb :listings
 
     

@@ -1,9 +1,5 @@
-name: <%=@name%> 
-<br />
-description: <%=@description%>
-<br />
-price per night: <%=£@price%>
-<br />
-date from: <%=@date_from%>
-<br />
-date to: <%=@date_to%> 
+<ul>
+  <% @listings.each do |listing| %>
+    <li><%= listing %></li>
+  <% end %>
+</ul>
