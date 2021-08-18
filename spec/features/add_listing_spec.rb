@@ -10,7 +10,7 @@ feature 'Add listing test' do
     fill_in('description', with: 'desert oasis')
     fill_in('price', with: 10)
     fill_in('date_from', with: '10/10/2021')
-
+    fill_in('date_to', with: '20/10/2021')
 
     click_button('Submit')
     
@@ -20,7 +20,7 @@ feature 'Add listing test' do
     expect(page).to have_content('desert oasis')
     expect(page).to have_content('£10')
     expect(page).to have_content('10/10/2021')
-    # expect(page).to have_content('20/10/2021')
+    expect(page).to have_content('20/10/2021')
 
   end
 end
