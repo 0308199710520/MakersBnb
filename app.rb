@@ -3,11 +3,11 @@ require 'sinatra/reloader'
 require 'sinatra/base'
 require 'sinatra/flash'
 require './lib/user.rb'
+require 'sinatra/flash'
 
 class MakersBnb < Sinatra::Base
   enable :sessions
   
-
   configure :development do
     register Sinatra::Reloader
     register Sinatra::Flash
