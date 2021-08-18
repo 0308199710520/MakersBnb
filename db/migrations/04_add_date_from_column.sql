@@ -1,0 +1,1 @@
+ALTER TABLE listings ADD COLUMN date_from VARCHAR(20);

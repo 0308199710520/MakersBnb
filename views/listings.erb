@@ -1,0 +1,24 @@
+<ul>
+  <% @listings.each do |listing| %>
+     <b> name: </b><%= listing.name %>
+    <br/>
+    <b> description: </b><%= listing.description %>
+    <br/>
+    <b> price per night: </b>£<%= listing.price %>
+    <br/>
+    <br/>
+    <em> availabilty </em>
+    <br/>
+    <b> date from: </b><%= listing.date_from %>
+    <br/>
+    <b> date to: </b><%= listing.date_to %>
+    <br/>
+    <br/>
+    <form action="listings/booking" method="get">
+      <button type="submit" name="listing_id" value="<%= listing.id %>">Request to Book</button>
+    </form>
+    <br/>
+    <br/>
+  <% end %>
+
+</ul>
