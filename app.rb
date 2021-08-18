@@ -15,19 +15,30 @@ class MakersBnb < Sinatra::Base
     erb :index
   end 
 
+  post'/newuser' do 
+    user = User.new
+    user.create(email: params[:email], password: params[:password])
+    redirect '/login'
+  end 
+
   get '/login' do
     erb :login
   end 
 
   post '/login' do 
-    User.create(email: params[:email], password: params[:password])
-    erb :login
+    user = User.new
+    test1 = client.login(email: params[:email], password: params[:password])
+    if test1 == true
+      @email = session[:email]
+      redirect '/spaces'
+    else
+      redirect '/'
+    end
   end 
 
-   post '/spaces' do
+  get '/spaces' do
     'View our spaces'
   end
-
 
   run! if app_file == $0
 

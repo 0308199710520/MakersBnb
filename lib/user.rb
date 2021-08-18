@@ -3,14 +3,8 @@ require 'pg'
 class User
   attr_reader :email, :password, :id
 
-  def initialize(email:, password:, id:)
-    @id
-    @email = email
-    @password = password
-  end
-
-  def self.create(email:, password:)
-    if password 
+  def create(email:, password:)
+    # if password == confirm_password
 
       if ENV['ENVIRONMENT'] == 'test'
         connection = PG.connect(dbname: 'makersbnb_test')
@@ -18,18 +12,11 @@ class User
         connection = PG.connect(dbname: 'makersbnb')
       end
 
-      result = connection.exec("INSERT INTO user_info (email, password) VALUES ('#{email}', '#{password}')
-      RETURNING id, email, password;")
+      result = connection.exec("INSERT INTO user_info (email, password) VALUES ('#{email}', '#{password}');")
 
-      User.new(
-        id: result[0]['id'],
-        email: result[0]['email'],
-        password: result[0]['password']
-      )
-    end 
   end
 
-  def self.authenticate(email:, password:)
+  def login(email:, password:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makersbnb_test')
     else 
@@ -39,6 +26,13 @@ class User
     result = connection.exec("SELECT * FROM user_info WHERE email LIKE '#{email}' AND password LIKE '#{password}';")
     result = result.map { |email| email['email'] }
 
+    puts result
+
+    if result.empty?
+      return false
+    else
+      return true
+    end
     
   end 
 end
