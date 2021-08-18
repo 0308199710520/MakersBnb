@@ -27,7 +27,7 @@ class MakersBnb < Sinatra::Base
 
   post '/login' do 
     user = User.new
-    test1 = client.login(email: params[:email], password: params[:password])
+    test1 = user.login(email: params[:email], password: params[:password])
     if test1 == true
       @email = session[:email]
       redirect '/spaces'

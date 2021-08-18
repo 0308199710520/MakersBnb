@@ -26,8 +26,6 @@ class User
     result = connection.exec("SELECT * FROM user_info WHERE email LIKE '#{email}' AND password LIKE '#{password}';")
     result = result.map { |email| email['email'] }
 
-    puts result
-
     if result.empty?
       return false
     else
