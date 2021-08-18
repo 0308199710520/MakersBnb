@@ -1,5 +1,27 @@
-your booking: 
+Booking: 
 
 
+<%= @listing_id %>
+<br />
+ <b> name: </b> <%= @listed[:name] %>
+<br />
+ <b> description: </b> <%= @listed[:description] %>
+<br />
+ <b> price: </b> <%= @listed[:price] %>
+<br />
+<em> availabilty </em>
+<br />
+<b> date from </b> <%= @listed[:date_from] %>
+<br />
+<b> date to </b> <%= @listed[:date_to] %>
+<br />
+<br />
 which dates would you like to request?
+
+
+<label>Enter a check-in date: </label>
+<input type="date" name="check_in" max="2021-08-20">
+
+<label>Enter a check-out date:</label>
+<input type="date" name="check_out" min="2021-08-29">
 

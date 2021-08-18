@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require 'sinatra/base'
 require 'pg'
 require_relative './lib/listing.rb'
+require_relative './lib/booking.rb'
 
 
 class MakersBnb < Sinatra::Base
@@ -43,6 +44,8 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/listings/booking' do
+    @listing_id = params['listing_id']
+    @listed = Booking.display_booking(@listing_id)
     erb :'listings/booking'
     
   end
