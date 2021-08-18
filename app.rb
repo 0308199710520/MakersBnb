@@ -38,16 +38,12 @@ class MakersBnb < Sinatra::Base
     test1 = user.login(email: params[:email], password: params[:password])
     if test1 == true
       @email = session[:email]
-      redirect '/spaces'
+      redirect '/listings'
     else
-      flash[:alert] = "Please check your username and password"
+      flash[:notice] = "Please check your username and password"
       redirect '/login'
     end
   end 
-
-  get '/spaces' do
-    'View our spaces'
-  end
 
   get '/listings' do
     

@@ -1,12 +1,19 @@
-<h1> Login to MakersBnB</h1>
+<main class="beach-bg">
 
-<form action="/login" method="post">
+  <h1> Login to MakersBnB</h1>
 
-  Email address: <input type="text" name="email" />
+  <form action="/login" method="post" class="login-form">
+    <label for="email">Email Address: <input type="email" id="email" name="email" /></label>
+   
+    <label for="password">Password: <input type="password" id="password" name="password" /></label>
+    
+    <input type="submit" value="Login" class="login-button"/>
+  </form>
 
-  Password: <input type="password" name="password" />
+  <div class="flash-notice">
+    <%= flash[:notice]%>
+  </div>
 
-  <input type="submit" value="Login" />
-</form>
+  <a href='/'>Not a member? Sign up here!</a>
 
-<a href='/'>Not a member? Sign up here!</a>
+</main>
