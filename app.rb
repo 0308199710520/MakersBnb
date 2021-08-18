@@ -37,14 +37,13 @@ class MakersBnb < Sinatra::Base
     
     Listing.create(name: params['name'], description: params['description'],
        price: params['price'], date_from: params['date_from'], date_to: params['date_to'])
-    
-
-
-   
-    
-    
     redirect '/listings'
   
+  end
+
+  get '/booking' do
+    'which dates do you want to request to book?'
+    
   end
 
   run! if app_file == $0
