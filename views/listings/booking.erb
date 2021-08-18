@@ -19,9 +19,13 @@ Booking:
 which dates would you like to request?
 
 
+<form action="booking/confirmation" method="post">
 <label>Enter a check-in date: </label>
-<input type="date" name="check_in" max="2021-08-20">
+<input type="date" name="check_in" min="<%= @listed[:date_from] %>">
 
 <label>Enter a check-out date:</label>
-<input type="date" name="check_out" min="2021-08-29">
+<input type="date" name="check_out" max="<%= @listed[:date_to] %>">
+
+  <button type="submit" name="Submit" >Submit</button>
+  </form>
 

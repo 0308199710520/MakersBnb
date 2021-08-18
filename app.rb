@@ -50,6 +50,25 @@ class MakersBnb < Sinatra::Base
     
   end
 
+  get '/listings/booking/confirmation' do
+    @check_in = session[:check_in] 
+    @check_out = session[:check_out]
+   
+    erb :'listings/booking/confirmation'
+  end
+
+  post '/listings/booking/confirmation' do
+    session[:check_in] = params['check_in']
+    session[:check_out] = params['check_out']
+    redirect '/listings/booking/confirmation' 
+
+    #need to replace sessions with a 
+    #Booking.create(check_in: params['check_in'],check_out: params['check_out']) also booking, listing and user id
+    
+  end
+  
+
+
   run! if app_file == $0
 
 end
