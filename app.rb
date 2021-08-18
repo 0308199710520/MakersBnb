@@ -15,6 +15,10 @@ class MakersBnb < Sinatra::Base
     erb :index
   end 
 
+  get '/login' do
+    erb :login
+  end 
+
   post '/login' do 
     User.create(email: params[:email], password: params[:password])
     erb :login
@@ -29,6 +33,3 @@ class MakersBnb < Sinatra::Base
 
 end
 
-
-#CREATE DATABASE makersbnb
-#CREATE TABLE user(id SerialPrimaryKey, email Varchar(50), password Varchar(10))

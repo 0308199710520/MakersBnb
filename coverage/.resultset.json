@@ -26,14 +26,14 @@
       },
       "/Users/Student/projects/makersbnb/MakersBnb/spec/features/login_spec.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           null
         ]
@@ -53,7 +53,7 @@
           null,
           1,
           1,
-          21,
+          25,
           1,
           1,
           null,
@@ -76,6 +76,6 @@
         ]
       }
     },
-    "timestamp": 1629217976
+    "timestamp": 1629277858
   }
 }
