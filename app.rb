@@ -4,6 +4,7 @@ require 'sinatra/base'
 require 'pg'
 require_relative './lib/listing.rb'
 
+
 class MakersBnb < Sinatra::Base
 
   enable :sessions
@@ -41,8 +42,8 @@ class MakersBnb < Sinatra::Base
   
   end
 
-  get '/booking' do
-    'which dates do you want to request to book?'
+  get '/listings/booking' do
+    erb :'listings/booking'
     
   end
 
