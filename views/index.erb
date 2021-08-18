@@ -1,14 +1,18 @@
-<h1> Feel at home, anywhere </h1>
+<main class="beach-bg">
 
-<h2> Sign up to MakersBnB </h2>
+  <h1> Feel at home, anywhere </h1>
 
-<form action="/newuser" method="post">
-  Email address: <input type="text" name="email" /><br>
+  <h2> Sign up to MakersBnB </h2>
 
-  Password: <input type="text" name="password" /><br>
+  <form action="/newuser" method="post" class="login-form">
+    <label for="email">Email Address: <input type="email" id="email" name="email" /></label>
 
-  Confirm password: <input type="text" name="confirm_password" /><br>
-  <input type="submit" value="Submit" />
-</form>
+    <label for="password">Password:<input type="text" id="password" name="password" /></label>
 
-<a href='/login'>Already a member? Sign In</a>
+    <label for="confirm_password">Confirm Password:<input type="text" id="confirm_password" name="confirm_password" /></label>
+    <input type="submit" value="Submit" />
+  </form>
+
+  <a href='/login'>Already a member? Sign In</a>
+
+</main>
