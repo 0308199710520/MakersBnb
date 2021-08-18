@@ -1,14 +1,16 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/base'
-require 'pg'
+require 'sinatra/flash'
 require './lib/user.rb'
 
 class MakersBnb < Sinatra::Base
   enable :sessions
+  
 
   configure :development do
     register Sinatra::Reloader
+    register Sinatra::Flash
   end
 
   get '/' do
@@ -32,7 +34,8 @@ class MakersBnb < Sinatra::Base
       @email = session[:email]
       redirect '/spaces'
     else
-      redirect '/'
+      flash[:alert] = "Please check your username and password"
+      redirect '/login'
     end
   end 
 
