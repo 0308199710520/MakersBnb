@@ -10,21 +10,23 @@ class User
   end
 
   def self.create(email:, password:)
-    if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'makersbnb_test')
-    else 
-      connection = PG.connect(dbname: 'makersbnb')
-    end
+    if password 
 
-    result = connection.exec("INSERT INTO user_info (email, password) VALUES ('#{email}', '#{password}')
-    Returning id, email, password;")
+      if ENV['ENVIRONMENT'] == 'test'
+        connection = PG.connect(dbname: 'makersbnb_test')
+      else 
+        connection = PG.connect(dbname: 'makersbnb')
+      end
 
-    User.new(
-      id: result[0]['id'],
-      email: result[0]['email'],
-      password: result[0]['password']
-    )
-  
+      result = connection.exec("INSERT INTO user_info (email, password) VALUES ('#{email}', '#{password}')
+      RETURNING id, email, password;")
+
+      User.new(
+        id: result[0]['id'],
+        email: result[0]['email'],
+        password: result[0]['password']
+      )
+    end 
   end
 
   def self.authenticate(email:, password:)
