@@ -1,8 +1,10 @@
+require "bcrypt"
+
 feature 'login' do 
   scenario 'a user can login with correct password' do 
     visit '/login'
     connection = PG.connect(dbname: 'makersbnb_test')
-    connection.exec("INSERT INTO user_info (email, password) VALUES ('user@gmail.com', 'password123');")
+    connection.exec("INSERT INTO user_info (email, password) VALUES ('user@gmail.com', '#{BCrypt::Password.create('password123')}');")
     fill_in("email", with: 'user@gmail.com') 
     fill_in('password', with: 'password123')
     click_button('Login')
