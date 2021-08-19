@@ -17,7 +17,7 @@ class Request
     
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makersbnb_test')
-    else
+    else\
       connection = PG.connect(dbname: 'makersbnb')
     end
     result = connection.exec("SELECT * FROM bookings")
