@@ -21,6 +21,7 @@ class User
 
   def password_same?(password:, confirm_password:)
     return password == confirm_password
+  end
 
   def connection
     if ENV['ENVIRONMENT'] == 'test'
