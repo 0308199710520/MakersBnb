@@ -1,38 +1,21 @@
-<div style = "position:fixed; left:850px; top:200px; background-color:peachpuff;">
+<main class="peer-bg">
 
+<h1> List your space </h1>
 
-         
-     
+<form action="/listings" method="post" class="new-listing-form">
+  
+  <label for="name">Name: <input type="text" name="name" class ="name"/></label>
+  
+  <label for="description">Description:<input type="text" class="description" name="description" /></label>
+  
+  <label for="price">Price per night (£):<input type="number" id="price" name="price" /></label>
+  
+  <label for="date_from">Available from <input type="date" id="date-from" name="date_from" /></label> 
+  
+  <label for="date_to">Available to <input type="date" id="date-to" name="date_to" /></label>
 
-<form action="/listings" method="post">
-  <center> 
-
-   Name:<p> <input type="text" name="name" />
-  <br/>
-  <br/>
-  Description: <p> <input type="text" name="description" />
-  <br/>
-  <br/>
-  Price:<p>  <input type="number" name="price" />
-  <br/>
-  <br/>
-  Available from:<p>  <input type="date" name="date_from" />
-  <br/>
-  <br/>
-  To:<p>  <input type="date" name="date_to" />
-  <br/>
-  <br/>
-  <br/>
-
-  <p><input type="submit" value="Submit" /> 
-  </center>
+  <input type="submit" value="Submit" class="login-button"/> 
+  
 </form>
 
-
-
-
- </div>
-
-
-
- 
+</main>

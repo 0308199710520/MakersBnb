@@ -17,6 +17,13 @@ describe User do
       
     end
   end
+    describe '.password_same?' do
+      it 'returns true when passwords match' do
+        check = User.new
+        check.password_same?(password: '12345', confirm_password: '12345')
+        expect(check).to eq(true)
+      end
+    end
 
   
 
