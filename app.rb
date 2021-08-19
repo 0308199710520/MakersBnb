@@ -82,7 +82,7 @@ class MakersBnb < Sinatra::Base
 
   post '/listings/booking/confirmation' do
 
-    Request.create(check_in: params['check_in'],check_out: params['check_out'],listing_id: params['listing id'], )
+    Request.create(check_in: params['check_in'],check_out: params['check_out'],listing_id: params['listing'], )
 
     session[:check_in] = params['check_in']
     session[:check_out] = params['check_out']
