@@ -17,4 +17,8 @@ class Booking
     listed_hash
     # result.map { |listing| listing['name'] }
     end
+
+    def self.create(user_id:, listing_id:, booking_id:, check_in:, check_out:)
+
+    end
 end
