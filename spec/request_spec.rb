@@ -2,20 +2,6 @@ require 'request'
 
 describe Request do
 
-  describe '.all' do
-    it 'displays booking request data' do
-
-
-      b = Request.create(listing_id: 8, check_in: '20/09/2021', check_out: '29/09/2021')
-      b = Request.all
-
-      expect(b.first).to be_a Request
-      expect(b.first.listing_id).to eq '8'
-      #expect(b.first.user_id).to eq '1'
-      expect(b.first.check_in).to eq '20/09/2021'
-      expect(b.first.check_out).to eq '29/09/2021'
-    end
-  end 
 
   describe '.create' do
     it "creates a booking request" do

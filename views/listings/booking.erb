@@ -6,7 +6,7 @@ Booking:
 <br />
  <b> description: </b> <%= @listed[:description] %>
 <br />
- <b> price: </b> <%= @listed[:price] %>
+ <b> price: </b> £<%= @listed[:price] %>
 <br />
 <em> availabilty </em>
 <br />
@@ -14,17 +14,18 @@ Booking:
 <br />
 <b> date to </b> <%= @listed[:date_to] %>
 <br />
+ 
 <br />
 which dates would you like to request?
 
 
-<form action="booking/confirmation" method="post">
+<form action="/listings/<%=@listed[:id]%>/booking/confirmation" method="post">
 <label>Enter a check-in date: </label>
 <input type="date" name="check_in" min="<%= @listed[:date_from] %>" max="<%= @listed[:date_to] %>">
 
 <label>Enter a check-out date:</label>
 <input type="date" name="check_out" min="<%= @listed[:date_from] %>" max="<%= @listed[:date_to] %>">
 
-  <button type="submit" name="Submit" >Submit</button>
-  </form>
+<button type="submit" name="submit">Submit</button>
+</form>
 

@@ -13,7 +13,7 @@ class Booking
     p result.class
     p result[0]['name']
     listed_hash = {name: result[0]['name'], description: result[0]['description'], price: result[0]['price'], 
-    date_from: result[0]['date_from'], date_to: result[0]['date_to']}
+    date_from: result[0]['date_from'], date_to: result[0]['date_to'], id: result[0]['id']}
     listed_hash
     # result.map { |listing| listing['name'] }
     end
