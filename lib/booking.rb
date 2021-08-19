@@ -5,9 +5,9 @@ class Booking
 
   def self.display_booking(id)
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'makers_bnb_test')
+      connection = PG.connect(dbname: 'makersbnb_test')
     else
-      connection = PG.connect(dbname: 'makers_bnb')
+      connection = PG.connect(dbname: 'makersbnb')
     end
     result = connection.exec("SELECT * FROM listings WHERE id = '#{id}'")
     p result.class
