@@ -14,6 +14,11 @@ feature 'Homepage test' do
     expect(page).to have_content('Login to MakersBnB')
   end 
 
+  scenario 'homepage has a sign in button' do
+    visit('/')
+    click_link('Sign In')
+    expect(current_path).to eq '/login'
+  end
 end 
 
   

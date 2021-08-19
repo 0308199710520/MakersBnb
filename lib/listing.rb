@@ -16,9 +16,9 @@ class Listing
   def self.all
     
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'makers_bnb_test')
+      connection = PG.connect(dbname: 'makersbnb_test')
     else
-      connection = PG.connect(dbname: 'makers_bnb')
+      connection = PG.connect(dbname: 'makersbnb')
     end
     result = connection.exec("SELECT * FROM listings")
     result.map { |listing| Listing.new(id: listing['id'], name:listing['name'], description: listing['description'], price: listing['price'],
@@ -30,9 +30,9 @@ class Listing
   def self.create(name:, description:, price:, date_from:, date_to:)
    
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'makers_bnb_test')
+      connection = PG.connect(dbname: 'makersbnb_test')
     else
-      connection = PG.connect(dbname: 'makers_bnb')
+      connection = PG.connect(dbname: 'makersbnb')
     end
 
     connection.exec("INSERT INTO listings (name, description, price, date_from, date_to) VALUES('#{name}', '#{description}', '#{price}',
