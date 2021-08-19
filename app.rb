@@ -8,6 +8,7 @@ require 'sinatra/flash'
 require 'pg'
 require_relative './lib/listing.rb'
 require_relative './lib/booking.rb'
+require_relative './lib/request.rb'
 class MakersBnb < Sinatra::Base
   enable :sessions
   
@@ -67,21 +68,30 @@ class MakersBnb < Sinatra::Base
 
   get '/listings/booking' do
     @listing_id = params['listing_id']
+    
     @listed = Booking.display_booking(@listing_id)
     erb :'listings/booking'
     
   end
 
+  
+
   get '/listings/booking/confirmation' do
     @check_in = session[:check_in] 
     @check_out = session[:check_out]
+    
    
     erb :'listings/booking/confirmation'
   end
 
   post '/listings/booking/confirmation' do
+
     session[:check_in] = params['check_in']
     session[:check_out] = params['check_out']
+
+    request = Request.create(check_in: params['check_in'] ,check_out: params['check_out'],listing_id: session[:listing_id])
+
+    
     redirect '/listings/booking/confirmation' 
 
     #need to replace sessions with a 
