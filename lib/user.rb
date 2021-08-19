@@ -42,8 +42,15 @@ class User
 
     result = connection.exec("SELECT * FROM user_info WHERE email LIKE '#{email}' AND password LIKE '#{password}';")
     result = result.map { |email| email['email'] }
-
     return result.length > 0 
+  end 
+
+  def password_same?(password:, confirm_password:)
+    if password == confirm_password
+      return true
+    else
+      return false
+    end
   end 
 
   def connection
