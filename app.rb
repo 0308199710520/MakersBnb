@@ -68,30 +68,24 @@ class MakersBnb < Sinatra::Base
 
   get '/listings/booking' do
     @listing_id = params['listing_id']
-    
     @listed = Booking.display_booking(@listing_id)
     erb :'listings/booking'
     
   end
 
-  
-
   get '/listings/booking/confirmation' do
     @check_in = session[:check_in] 
     @check_out = session[:check_out]
-    
    
     erb :'listings/booking/confirmation'
   end
 
   post '/listings/booking/confirmation' do
 
+    Request.create(check_in: params['check_in'],check_out: params['check_out'],listing_id: params['listing id'], )
+
     session[:check_in] = params['check_in']
     session[:check_out] = params['check_out']
-
-    request = Request.create(check_in: params['check_in'] ,check_out: params['check_out'],listing_id: session[:listing_id])
-
-    
     redirect '/listings/booking/confirmation' 
 
     #need to replace sessions with a 
