@@ -12,4 +12,9 @@ gem "selenium-webdriver"
 gem "sinatra-flash"
 gem 'simplecov', require: false, group: :test
 gem 'simplecov-console', require: false, group: :test
+gem 'bcrypt'
+gem "puma"
+gem "thin"
+gem "falcon"
+gem "webrick"
 # gem "rails"

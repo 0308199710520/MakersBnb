@@ -14,9 +14,10 @@ describe User do
       content = con.exec("SELECT email, password FROM user_info").map{|each| each}
       expect(content[0]["email"]).to eq "user@gmail.com"
       expect(content[0]["password"]).to eq "password"
-      
     end
   end
+
+  
 
   
 
