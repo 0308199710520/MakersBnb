@@ -41,8 +41,7 @@ class MakersBnb < Sinatra::Base
 
   post '/login' do 
     user = User.new
-    test1 = user.login(email: params[:email], password: params[:password])
-    if test1 == true
+    if user.login(email: params[:email], password: params[:password])
       @email = session[:email]
       redirect '/listings'
     else
@@ -64,11 +63,9 @@ class MakersBnb < Sinatra::Base
   end
  
   post '/listings' do
-    
-    Listing.create(name: params['name'], description: params['description'],
-       price: params['price'], date_from: params['date_from'], date_to: params['date_to'])
-    redirect '/listings'
-  
+      Listing.create(name: params['name'], description: params['description'],
+        price: params['price'], date_from: params['date_from'], date_to: params['date_to'])
+      redirect '/listings'
   end
 
 
