@@ -25,8 +25,13 @@ class MakersBnb < Sinatra::Base
   post'/newuser' do  
     user = User.new
     if user.password_same?(password: params['password'], confirm_password: params['confirm_password'])
-      user.create(email: params[:email], password: params[:password])
-      redirect '/login'
+      if user.email_not_in_database(email: params['email'])  
+        user.create(email: params[:email], password: params[:password])
+        redirect '/login'
+      else
+        flash[:notice] = "This email is already in use"
+        redirect "/"
+      end
     else
       flash[:notice] = "Passwords do not match" 
       redirect '/'
