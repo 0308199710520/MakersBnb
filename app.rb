@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/base'
-
 require 'sinatra/flash'
 require './lib/user.rb'
 require 'sinatra/flash'
@@ -9,16 +8,15 @@ require 'pg'
 require_relative './lib/listing.rb'
 require_relative './lib/booking.rb'
 require_relative './lib/request.rb'
+
 class MakersBnb < Sinatra::Base
+
   enable :sessions
-  
 
   configure :development do
     register Sinatra::Reloader
     register Sinatra::Flash
   end
-
-
 
   get '/' do
     erb :index
@@ -42,7 +40,7 @@ class MakersBnb < Sinatra::Base
   post '/login' do 
     user = User.new
     if user.login(email: params[:email], password: params[:password])
-      @email = session[:email]
+      session[:email] = params[:email]
       redirect '/listings'
     else
       flash[:notice] = "Incorrect email or password, try again"
