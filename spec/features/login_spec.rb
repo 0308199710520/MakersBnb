@@ -22,7 +22,7 @@ feature 'login' do
     click_button('Login')
     
     expect(page.current_path).to eq ('/login')
-  endx
+  end
 end 
 feature 'button to sign up page' do 
   scenario 'login page has a link to go back to the signup page' do 
