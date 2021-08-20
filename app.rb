@@ -55,6 +55,9 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/listings/new' do
+
+    
+    
     erb :listing_new
   end
  
