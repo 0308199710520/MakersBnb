@@ -69,10 +69,9 @@ class MakersBnb < Sinatra::Base
 
   get '/listings/booking' do
     
-    p 'form'
+   
     @listing_id = params['listing_id']
-    p @listing_id
-    p "hi"
+    
     
     @listed = Booking.display_booking(@listing_id)
     erb :'listings/booking'
@@ -83,7 +82,7 @@ class MakersBnb < Sinatra::Base
 
 
   get '/listings/:id/booking/confirmation' do
-    p 'confirmation'
+
     @check_in = session[:check_in] 
     @check_out = session[:check_out]
    
@@ -92,7 +91,7 @@ class MakersBnb < Sinatra::Base
 
   post '/listings/:id/booking/confirmation' do
 
-    p 'form submission'
+   
     
 
     Request.create(check_in: params['check_in'],check_out: params['check_out'],listing_id: params['id'], )
