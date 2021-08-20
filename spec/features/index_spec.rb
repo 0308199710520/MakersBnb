@@ -17,7 +17,7 @@ feature 'Homepage test' do
 
   scenario 'homepage has a sign in button' do
     visit('/')
-    click_link('Sign In')
+    click_link('Already a member? Sign in here!')
     expect(current_path).to eq '/login'
   end
 end 
