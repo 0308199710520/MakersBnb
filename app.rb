@@ -24,10 +24,15 @@ class MakersBnb < Sinatra::Base
     erb :index
   end 
 
-  post'/newuser' do 
+  post'/newuser' do  
     user = User.new
-    user.create(email: params[:email], password: params[:password])
-    redirect '/login'
+    if user.password_same?(password: params['password'], confirm_password: params['confirm_password'])
+      user.create(email: params[:email], password: params[:password])
+      redirect '/login'
+    else
+      flash[:notice] = "Passwords do not match" 
+      redirect '/'
+    end 
   end 
 
   get '/login' do

@@ -12,7 +12,10 @@
     <label for="confirm_password">Confirm Password:<input type="text" id="confirm_password" name="confirm_password" /></label>
     <input type="submit" value="Submit" />
   </form>
-
+  
+<div class="flash-notice">
+    <%= flash[:notice]%>
+  </div>
   <a href='/login'>Already a member? Sign In</a>
 
 </main>
