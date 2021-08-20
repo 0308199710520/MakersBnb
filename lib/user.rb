@@ -28,4 +28,12 @@ class User
       connection = PG.connect(dbname: 'makersbnb')
     end
   end
+
+  def email_not_in_database(email:)
+    con = connection()
+
+    probe = con.exec("SELECT * FROM user_info WHERE email LIKE '#{email}';")
+    probe = probe.map {|email| email}
+    return probe.length == 0
+  end
 end
