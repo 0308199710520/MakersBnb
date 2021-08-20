@@ -18,40 +18,40 @@ I want to be able to sign up for the website ✅
 
 As a user 
 I want the website to store my login info
-So that I can log back in
+So that I can log back in ✅
 
 As a user
-I want to be able to sign/log in
+I want to be able to sign/log in ✅
 
 As a user
-I want to be able to create a new space listing
+I want to be able to create a new space listing ✅
 
 As a user
-I want to be able to create multiple space listings
+I want to be able to create multiple space listings ✅
 
 As a user
-I want to be able to add a name to my space
+I want to be able to add a name to my space ✅
 
 As a user 
-I want to be able to write a description of the space
+I want to be able to write a description of the space ✅
 
 As a user
-I want to be able to add a price per night to the space
+I want to be able to add a price per night to the space ✅
 
 As a user
-I want to be able to list the dates a space will be available
+I want to be able to list the dates a space will be available ✅
 
 As a user
-I want to be able to request a space
+I want to be able to request a space ✅
 
 As a user
-I want to be able to approve/ deny a request
+I want to be able to approve/ deny a request 
 
 As a user
-I only want to be able to see nights the room is not booked and available
+I only want to be able to see nights the room is not booked and available ✅
 
 As a user
-I want to leave a space available until the owners confirmation
+I want to leave a space available until the owners confirmation 
 
 **RSPEC COVERAGE** 
 
